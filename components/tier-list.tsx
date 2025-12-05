@@ -1,41 +1,32 @@
 import { Crown, Star, Shield } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-// Real game data - S-Tier races have golden border
+// Accurate race data
 const tiers = [
   {
     tier: "S",
-    label: "S-Tier",
-    color: "gold", // Golden border for S-Tier
+    label: "S-Tier (Godly)",
+    color: "gold",
     icon: Crown,
-    races: [
-      { name: "Demon", specialty: "Damage" },
-      { name: "Dwarf", specialty: "Mining" },
-      { name: "Angel", specialty: "Healing" },
-    ],
-    description: "The best races in the game. Prioritize rerolling for these!",
+    races: ["Demon", "Angel", "Dwarf"],
+    description:
+      "The absolute meta. 'Demon' deals massive fire damage. 'Angel' has infinite stamina. 'Dwarf' is the #1 Mining Race (15% Speed Buff).",
   },
   {
     tier: "A",
-    label: "A-Tier",
+    label: "A-Tier (Strong)",
     color: "purple",
     icon: Star,
-    races: [
-      { name: "Elf", specialty: "Luck" },
-      { name: "Dragonborn", specialty: "Tank" },
-    ],
-    description: "Excellent choices with strong abilities. Great alternatives to S-Tier.",
+    races: ["Dragonborn", "Elf", "Golem"],
+    description: "Great choices. 'Elf' gives +7% Luck (essential for crafting). 'Dragonborn' is the best tank.",
   },
   {
     tier: "B",
-    label: "B-Tier",
+    label: "B-Tier (Good)",
     color: "blue",
     icon: Shield,
-    races: [
-      { name: "Human", specialty: "Balanced" },
-      { name: "Orc", specialty: "Strength" },
-    ],
-    description: "Solid starter races. Good for beginners learning the game.",
+    races: ["Orc", "Zombie", "Goblin"],
+    description: "Solid for beginners. 'Goblin' gives shop discounts. 'Orc' has pure physical damage.",
   },
 ]
 
@@ -105,12 +96,8 @@ export function TierList() {
                 <CardContent>
                   <div className="mb-3 flex flex-wrap gap-2">
                     {tier.races.map((race) => (
-                      <span
-                        key={race.name}
-                        className={`rounded-full border px-3 py-1 text-sm font-medium ${badgeBg}`}
-                      >
-                        {race.name}
-                        <span className="ml-1 text-xs opacity-70">({race.specialty})</span>
+                      <span key={race} className={`rounded-full border px-3 py-1 text-sm font-medium ${badgeBg}`}>
+                        {race}
                       </span>
                     ))}
                   </div>

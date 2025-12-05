@@ -11,14 +11,16 @@ interface Code {
   status: "active" | "expired"
 }
 
-// Real game data - updated regularly
+// Real game data - updated regularly (verified)
 const codes: Code[] = [
-  { code: "300K", reward: "5 Race Rerolls", status: "active" },
-  { code: "Summer", reward: "500 Gems", status: "active" },
-  { code: "Forging", reward: "250 Gems", status: "active" },
-  { code: "Operations", reward: "5 Race Rerolls", status: "active" },
-  { code: "Sub2Caleb", reward: "100 Gems", status: "active" },
-  { code: "Demon", reward: "Demon Race Reroll", status: "expired" },
+  { code: "400K!", reward: "8 Race Rerolls", status: "active" }, // 最新发布
+  { code: "PEAK!", reward: "10 Race Rerolls", status: "active" }, // 大额码
+  { code: "SORRYFORSHUTDOWN", reward: "5 Race Rerolls", status: "active" }, // 补偿码
+  { code: "300K!", reward: "1 Luck Totem & 5 Rerolls", status: "expired" },
+  { code: "200K!", reward: "5 Race Rerolls", status: "expired" },
+  { code: "100KLIKES", reward: "10 Race Rerolls", status: "expired" },
+  { code: "40KLIKES", reward: "5 Race Rerolls", status: "expired" },
+  { code: "BETARELEASE!", reward: "2 Race Rerolls", status: "expired" },
 ]
 
 // Dynamic month for display
@@ -41,22 +43,22 @@ export function CodesTable() {
   const expiredCodes = codes.filter((c) => c.status === "expired")
 
   return (
-    <section className="py-12 md:py-16" id="codes">
+    <section className="pt-0 md:pt-2 pb-12 md:pb-14" id="codes">
       <div className="container mx-auto px-4">
-        <div className="mb-4 flex items-center gap-3">
+        <div className="mb-3 flex items-center gap-3">
           <Gift className="h-8 w-8 text-emerald-500" />
           <h2 className="text-2xl font-bold md:text-3xl">
             Working Codes in The Forge ({currentMonth})
           </h2>
         </div>
 
-        <p className="mb-8 text-gray-400">
+        <p className="mb-6 text-gray-400">
           Below is the full list of <strong className="text-amber-400">all codes in the forge roblox</strong>.
           Click copy to <strong className="text-emerald-400">redeem code the forge</strong> instantly for Gems
           and Rerolls.
         </p>
 
-        <Badge className="mb-6 bg-emerald-500/20 text-emerald-400">
+        <Badge className="mb-4 bg-emerald-500/20 text-emerald-400">
           {activeCodes.length} Available
         </Badge>
 
