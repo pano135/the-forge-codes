@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /*?q=
+Disallow: /*&q=
+
+
+Sitemap: https://theforgecodes.pro/sitemap.xml
