@@ -15,12 +15,20 @@ interface Code {
 const codes: Code[] = [
   { code: "400K!", reward: "8 Race Rerolls", status: "active" }, // 最新发布
   { code: "PEAK!", reward: "10 Race Rerolls", status: "active" }, // 大额码
-  { code: "SORRYFORSHUTDOWN", reward: "5 Race Rerolls", status: "active" }, // 补偿码
+  // 已过期
+  { code: "SORRYFORSHUTDOWN", reward: "5 Race Rerolls", status: "expired" },
   { code: "300K!", reward: "1 Luck Totem & 5 Rerolls", status: "expired" },
   { code: "200K!", reward: "5 Race Rerolls", status: "expired" },
+  { code: "100K!", reward: "Race Rerolls", status: "expired" },
   { code: "100KLIKES", reward: "10 Race Rerolls", status: "expired" },
   { code: "40KLIKES", reward: "5 Race Rerolls", status: "expired" },
+  { code: "20KLIKES", reward: "Race Rerolls", status: "expired" },
+  { code: "15KLIKES", reward: "Race Rerolls", status: "expired" },
+  { code: "10KLIKES", reward: "Race Rerolls", status: "expired" },
+  { code: "5KLIKES", reward: "Race Rerolls", status: "expired" },
   { code: "BETARELEASE!", reward: "2 Race Rerolls", status: "expired" },
+  { code: "POSTRELEASEQNA", reward: "Race Rerolls", status: "expired" },
+  { code: "RELEASE", reward: "Race Rerolls", status: "expired" },
 ]
 
 // Dynamic month for display
